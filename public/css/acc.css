@@ -1,0 +1,177 @@
+*{
+	margin:0;
+}
+html{
+	height: 100%
+}
+body{
+	height: 100%;
+	margin:0;
+	background: url("../img/jeremy-bishop-171845-unsplash.jpg");
+	/*if no image go to section uncomment background*/
+	background-image: linear-gradient(#0a5a73, #16607b 1.3%, #145f76 2.8%, #17637b 9.4%, #17677e 9.6%, #1f6780 10.2%, #1e6980 11.1%, #256980 14.4%, #276f87 17.9%, #277486 20.2%, #32748a 22.1%, #387b8e 24.4%, #33778c 24.8%, #377c8c 25%, #357c8e 27.9%, #37818e 28.7%, #397c8d 29.4%, #377f8d 29.8%, #3a8491 32.5%, #428192 33.5%, #418793 33.9%, #468799 35.6%, #418995 36.2%, #4d8c9b 39.3%, #4a8c98 40.6%, #5b949f 46.8%, #5b919d 47.2%, #5a939e 47.7%, #5e949e 48.9%, #5b9299 48.9%, #5d949b 49.1%, #5d919c, #5e939b 49.9%, #64969f 50%, #5c959e 50.6%, #6b97a0 54.3%, #6c999e 57.2%, #779a9e 61.8%, #739b9d 62.2%, #769ba1 62.4%, #83a1a3 67.8%, #89a1a5 68.7%, #87a1a2 69.1%, #879fa1 69.5%, #8ba0a3 69.5%, #89a3a4 70.7%, #8da2a3 71.8%, #9ba6a2 77.6%, #9ca5a0 78.8%, #a1a69f 80.1%, #a1a39e 80.7%, #a3a69f 81.1%, #a9a9a1 82.4%, #aca9a0 82.8%, #a8a89c 83%, #b2ab98 86.1%, #bcae94 88.4%, #c0af95 89.7%, #c3af96, #c1b094 90.1%, #ccb492 92.4%, #d0b395 93.2%, #ceb491 93.8%, #d6b78b 95.7%, #dab986 98.8%, #deb985);
+	background-size: cover;
+	background-position: center;
+}
+.bouton{
+	border: 1px solid black;
+	border-radius: 13px;
+	background:none;
+	text-transform: uppercase;
+	color: black;
+	font-weight: bold;
+
+}
+.bouton:hover{
+	background-color: #282d6d;
+	color: white;
+
+}
+.bouton:focus{
+	outline-color: black;
+
+}
+
+
+
+.header{
+	display: flex;
+	flex-direction: row;
+
+	background: #52568e ;
+	margin: auto;
+	height:10%;
+	width: 100%;
+}
+h1{
+	height: fit-content;
+    margin: auto auto auto 9px;
+
+}
+.bouton-header{
+	
+	height: fit-content;
+	margin:auto 4px auto auto;
+	padding: 4px;
+	text-decoration: none;
+	
+}
+.end{
+	margin-left: 4px;
+}
+
+.myInput{
+	
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    transition: box-shadow 200ms cubic-bezier(0.4,0.0,0.2,1);
+    background-color: #fff;
+    border: 1px solid rgb(185,185,185);
+    border-radius: 1px;
+    border-top-color: rgb(160,160,160);
+    cursor: text;
+    font: 18px arial,sans-serif;
+    line-height: 36px;
+    max-width: 672px;
+    position: relative;
+
+}
+/*.myInput:first-of-type{
+    border-radius: 13px 13px 0 0;
+}
+.myInput:last-of-type{
+    border-radius: 0 0 13px 13px;
+}*/
+
+input:first-child, input:first-of-type{
+    border-radius: 13px 13px 0 0;
+}
+
+input:last-child{
+    border-radius: 0 0 13px 13px;
+
+}
+
+
+
+
+
+
+
+
+section{
+	/*background: #4a4a88;*/
+	display: flex;
+	margin: 0;
+	width: 100%;
+	height: 81%;
+
+}
+div{
+	
+
+
+}
+form{
+	margin:auto;
+	display: flex;
+	flex-direction: column;
+}
+
+input ,label{
+	height:10%;
+	margin: 5px;
+	text-align: center;
+	font-size: 1.3em;
+}
+label{
+	height: fit-content;
+}
+input:focus{
+	outline: none;
+	border-color: black;
+}
+input:hover{
+	border-color: black;
+}
+
+
+
+footer{
+	margin:0;
+	background-color: #282d6d;
+	height:5%;
+
+	display: flex;
+}
+p{
+	height: fit-content;
+    margin:auto 6px auto auto;
+
+}
+
+
+/*edit bootstrap*/
+.navbar{
+	opacity: 0.9;
+}
+.bg-primary{
+	background-color: #52568e !important
+}
+.h-10{
+	height: 10% !important
+}
+.btn-outline-dark{
+	border-color: #000;
+}
+.btn-outline-dark:hover{
+	background: #282d6d;
+
+}
+a.navbar-brand{
+	font-size: 3em;
+}
+.container-fluid{
+	justify-content: center;
+}
