@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+//setting port
+var port = process.env.PORT || 3000;
 
 //use public directory
 app.use(express.static("public"));
@@ -38,6 +40,6 @@ app.set("view engine", "ejs");
 
 
 //start server
-app.listen(3000, ()=>{
-	console.log("Server running on port 3000");
+app.listen(port, ()=>{
+	console.log("Server running on port "+port);
 })
