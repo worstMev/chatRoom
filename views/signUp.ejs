@@ -2,6 +2,10 @@
 	<head>
 		<title> sign up </title>
 
+		<%include partials/basicStyle %>
+		<link rel="stylesheet" type="text/css" href="/css/views/my/signUp.css">
+	</head>
+
 		<% include partials/header_navbar_brand %>
 		
 
@@ -25,15 +29,21 @@
 		<section>
 			<form method="POST" action="/newMember">
 
-				<input type="email" placeholder="email"  name="email" required class="myInput"/>
-				<input type="password" placeholder="password"  name="password" required class="myInput"/>
+				<input type="email" placeholder="email"  name="email" required class="myInput" id="emailInput"/>
+				<input type="password" placeholder="password"  name="password" required class="myInput pass "/>
 				<label for="password2ndtime"> Re-write your password: </label>
-				<input type="password" placeholder="password" id="password2ndtime" name="password2ndtime" required class="myInput"/> 
+				<input type="password" placeholder="password" id="password2ndtime" name="password2ndtime" required class="myInput pass"/> 
 				<label for="login"> Lets call you: </label>
-				<input type="text" name="login" placeholder="login" id="login" class="myInput">
+				<input type="text" name="login" placeholder="login" id="login" class="myInput " required>
 				<input type="submit" value="submit inscription" class="bouton" />
 			</form>
 		</section>
 
 		<% include partials/footer %>
+		<% include partials/basicScript%>
+		<script type="text/javascript" src="/js/my/script.js"></script>
+
+
+	</body>
+</html>
 		

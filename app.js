@@ -117,18 +117,6 @@ app.set("view engine", "ejs");
 				}
 			}) ().catch(err=> console.error(err.stack));
 
-
-
-
-			//test
-			(async () => {
-				const client = await pool.connect();
-				let now = await client.query('select now();');
-				client.release();
-				console.log("----test now----"+now.rows[0]);
-
-
-			}) ().catch(err=> console.log(err.stack));
 	});
 
 
@@ -154,10 +142,46 @@ app.set("view engine", "ejs");
 			}
 		}) ().catch( err=> console.log(err.stack));
 
+	});
 
+	//route for receiving ajax 
+	//search double everything
+	app.get('/searchDouble/:table/:column/:val',(req,res)=>{
+
+		//make the query to db
+		let column = req.params.column;
+		let value = req.params.val;
+		let table = req.params.table;
+
+		//query
+		let query = "SELECT "+column+" FROM "+table+" WHERE "+column+" = $1;";
+		let params = [value];
+		console.log("column "+column);
+		console.log("value "+value);
+		console.log("query "+query);
+
+		(async () => {
+			const client = await pool.connect();
+			try {
+				const results = await client.query(query, params);
+				//if it's already there
+				if(results.rows[0]){
+					res.send(true);
+				}else{
+					res.send('');
+				}
+			} catch(e) {
+				res.send("error");
+				console.log(e);
+			} finally {
+				client.release();
+			}
+		})();		
 
 
 	});
+		//validate email
+		//verify if email is already taken
 
 
 

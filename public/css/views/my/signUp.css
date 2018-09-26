@@ -1,0 +1,11 @@
+.valid{
+	/*background-color: #12e0308a;*/
+	border:3px solid #12e0308a !important;
+	
+} 
+
+.invalid{
+	/*background-color: #f32a2abf !important;*/
+	border:3px solid #f32a2abf !important;
+	/*background: #f32a2abf !important;*/
+}
